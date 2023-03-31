@@ -95,9 +95,7 @@ p {
   padding-bottom: 10px;
 }
 
-/* Why btn has block features without being a block element */
 .contactBtn {
-  /* border: solid 2px grey; */
   border-radius: 5px;
   border: none;
   display: block;
@@ -110,8 +108,16 @@ p {
   margin: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .navWrapper {
-    /* display: none; */
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   }
-}
+  
+.div1 { grid-area: 1 / 1 / 5 / 2; }
+  .div2 { grid-area: 1 / 2 / 2 / 3; }
+  .div3 { grid-area: 2 / 2 / 3 / 3; }
+  .div4 { grid-area: 3 / 2 / 4 / 3; }
+  .div5 { grid-area: 4 / 2 / 5 / 3; }
